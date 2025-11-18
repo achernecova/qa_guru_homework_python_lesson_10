@@ -3,9 +3,13 @@ from time import sleep
 import allure
 from allure_commons.types import Severity
 
-
 # Пишем тест на гитхаб - eroshenkoam/allure-example - проваливаемся в первую репу.
 # Ищем issues - и его там нет. Что делать?... Возьмем id = pull-requests-tab
+
+def test_no_labels():
+    pass
+
+
 
 def test_dynamic_labels_github():
     allure.dynamic.tag('web')
