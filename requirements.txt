@@ -9,6 +9,7 @@ flake8==7.3.0
 black==25.9.0
 selene==2.0.0rc9
 selenium==4.38.0
+allure-pytest
 
 pip~=25.2
 typing_extensions~=4.15.0
@@ -17,3 +18,4 @@ PySocks~=1.7.1
 
 future~=1.0.0
 pydantic~=2.12.4
+allure-python-commons~=2.15.0
