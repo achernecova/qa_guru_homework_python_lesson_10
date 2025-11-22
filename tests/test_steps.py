@@ -32,8 +32,8 @@ def test_dynamic_github():
 # Issue скрыто для данного проекта
 def test_decorator_steps():
     open_main_page()
-    search_for_repositiry("eroshenkoam/allure-example")
-    go_to_repository("eroshenkoam/allure-example")
+    search_for_repositiry("eroshenkoam/allure-playwright-example")
+    go_to_repository("eroshenkoam/allure-playwright-example")
     open_tab()
     should_see_requests_with_text("Не работает переход по табу Issues")
 
@@ -57,10 +57,10 @@ def go_to_repository(repo):
 
 @allure.step("Кликаем по табу requests")
 def open_tab():
-    s("#pull-requests-tab").click()
+    s("#issues-tab").click()
 
 
 @allure.step("Проверяем, что есть Pull request с текстом {text}")
 def should_see_requests_with_text(text):
-    s("[href='/eroshenkoam/allure-playwright-example/issues/1']").should(have.exact_text(
-        {text}))
+    s("[href='/eroshenkoam/allure-playwright-example/issues/1']").should(have.exact_text(f'{text}'
+        ))
